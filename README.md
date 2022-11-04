@@ -15,4 +15,4 @@ pip install behave-html-formatter\
 pip install webdriver-manager
 
 Run tests:\
-behave -f html -o behave-report.html --tags=emag
+behave -f html -o behave-report.html --tags=altex
