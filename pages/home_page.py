@@ -6,7 +6,7 @@ class HomePage(BasePage):
 
     ACCEPT_COOKIES_BTN = (By.CSS_SELECTOR, '.inline-block > .button-wrapper')
     NEWSLETTER_CLOSE_BTN = (By.CSS_SELECTOR, 'button.p-1')
-    HOMEPAGE_TITLE = (By.CSS_SELECTOR, 'Electronice si electrocasnice online la cel mai mic pret')
+    HOMEPAGE_TITLE = 'Electronice si electrocasnice online la cel mai mic pret'
     SEARCH_BOX = (By.CSS_SELECTOR, '[placeholder="Cauta produsul dorit"]')
 
     def navigate_to_home_page(self):
@@ -19,7 +19,9 @@ class HomePage(BasePage):
         self.click_if_present_by_selector(*self.NEWSLETTER_CLOSE_BTN)
 
     def home_page_title(self):
-        self.driver.find_element(*self.HOMEPAGE_TITLE)
+        page_title = self.driver.title
+        title_expected = self.HOMEPAGE_TITLE
+        self.assertEqual(title_expected, page_title, 'Page title is incorrect')
 
     def search_box(self):
         self.driver.find_element(*self.SEARCH_BOX)
