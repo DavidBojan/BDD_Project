@@ -22,4 +22,4 @@ def step_impl(context):
 
 @then('home: the url is "https://altex.ro/home/"')
 def step_imp(context):
-    context.verify_url_message()
+    context.home_page.verify_url_message()
