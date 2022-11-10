@@ -4,4 +4,4 @@ pip install behave-html-formatter
 pip install webdriver-manager
 
 run test
-behave -f html -o behave-report.html --tags=altex
+behave -f html -o behave-report.html
