@@ -27,7 +27,7 @@ class BasePage(Browser):
         self.driver.execute_script("arguments[0].click();", elem)
 
     def wait_and_fill_elem_by_selector(self, by, selector, text):
-        WebDriverWait(self.driver, 5).until(EC.presence_of_element_located((by, selector)))
+        WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((by, selector)))
         self.driver.find_element(by, selector).send_keys(text)
 
     def verify_element_is_displayed_by_selector(self, by, selector):

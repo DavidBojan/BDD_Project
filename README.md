@@ -1,7 +1,7 @@
 # BDD_Project
-Altex BDD Automation Framework
+Amazon BDD Automation Framework
 
-Site tested: altex.ro\
+Site tested: amazon.com\
 Design pattern used: page object model\
 Methodology: behavior driven development
 
@@ -15,4 +15,4 @@ pip install behave-html-formatter\
 pip install webdriver-manager
 
 Run tests:\
-behave -f html -o behave-report.html --tags=altex
+behave -f html -o behave-report.html --tags=amazon

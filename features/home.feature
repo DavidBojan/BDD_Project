@@ -1,7 +1,6 @@
 Feature: homepage functionality
-
-  Scenario: altex homepage title and search title
-    Given home: I am a user on altex.ro Home page
-    When home: I am checking the home page for header title
-    Then home: the search box field is displayed
-    And home: the url is "https://altex.ro/home/"
+  Scenario:
+    Given home: I am a user on amazon.com Home page
+    When home: I am checking for the home page header title
+    When home: the search box field is displayed
+    Then home: the sign in button is displayed
