@@ -31,3 +31,8 @@ def step_impl(context):
 @then('home: the Hello message is displayed')
 def step_impl(context):
     context.home_page.hello_message()
+
+
+@when('home: I search after "{query}"')
+def step_impl(context, query):
+    context.home_page.search_after(query)

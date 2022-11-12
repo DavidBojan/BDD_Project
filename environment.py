@@ -1,5 +1,5 @@
 from pages.login_page import LoginPage
-# from pages.products_page import ProductsPage
+from pages.products_page import ProductsPage
 # from pages.cart_page import CartPage
 from pages.home_page import HomePage
 from browser import Browser
@@ -9,7 +9,7 @@ def before_all(context):
     context.browser = Browser()
     context.home_page = HomePage()
     context.login_page = LoginPage()
-    # context.product_page = ProductsPage()
+    context.products_page = ProductsPage()
     # context.cart_page = CartPage()
 
 
