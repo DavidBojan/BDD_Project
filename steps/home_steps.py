@@ -1,6 +1,4 @@
 from behave import *
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
 
 
 @given('home: I am a user on amazon.com Home page')
