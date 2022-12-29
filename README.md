@@ -16,3 +16,6 @@ pip install webdriver-manager
 
 Run tests:\
 behave -f html -o behave-report.html
+
+Run tests with tags: homepage, search, login, cart\
+behave -f html -o behave-report.html --tags=search
