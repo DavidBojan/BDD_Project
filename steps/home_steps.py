@@ -34,3 +34,13 @@ def step_impl(context):
 @when('home: I search after "{query}"')
 def step_impl(context, query):
     context.home_page.search_after(query)
+
+
+@when('home: I search product after phone "{product}"')
+def step_impl(context, product):
+    context.home_page.search_product(product)
+
+
+@when('home: I click on cart')
+def step_impl(context):
+    context.home_page.click_on_cart()

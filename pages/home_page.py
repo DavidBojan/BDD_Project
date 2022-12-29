@@ -10,6 +10,7 @@ class HomePage(BasePage):
     SEARCH_BOX = (By.ID, 'twotabsearchtextbox')
     SIGN_IN_BUTTON = (By.XPATH, "//div[@id='nav-signin-tooltip']/a/span")
     HELLO_MESSAGE = (By.ID, 'nav-link-accountList-nav-line-1')
+    CART_BTN = (By.ID, "nav-cart")
 
     def navigate_to_home_page(self):
         self.driver.get('https://www.amazon.com/')
@@ -36,7 +37,10 @@ class HomePage(BasePage):
         self.driver.find_element(*self.SEARCH_BOX).send_keys(Keys.ENTER)
         sleep(1)
 
-    def search_product(self, text):
-        self.wait_and_fill_elem_by_selector(*self.SEARCH_BOX, text)
+    def search_product(self, product_name):
+        self.wait_and_fill_elem_by_selector(*self.SEARCH_BOX, product_name)
         self.driver.find_element(*self.SEARCH_BOX).send_keys(Keys.ENTER)
         sleep(1)
+
+    def click_on_cart(self):
+        self.click_if_present_by_selector(*self.CART_BTN)
